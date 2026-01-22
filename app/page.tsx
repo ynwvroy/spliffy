@@ -29,7 +29,7 @@ export default function Home() {
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((c) => (
             <div key={c.title} className="rounded-lg border p-4">
-              <div className="w-full h-40 relative overflow-hidden rounded-md bg-white">
+              <div className="relative w-full aspect-[4/3] overflow-hidden rounded-md bg-white">
                 <Image
                   src={c.src}
                   alt={c.alt}
