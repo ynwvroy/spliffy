@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { Header } from "@/components/header";
-import { ModeToggle } from "@/components/ui/mode-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TWBlocks",
-  description: "Free SaaS website blocks based on React with shadcn & Tailwind",
+  title: "Spiffy Lemon Calz Limited | Office & IT Supplies",
+  description:
+    "Office furniture, stationery, toners, laptops, computers, and medical equipment.",
   keywords:
-    "tailwindcss, react, shadcn, design, webdesign, website, saas templates, saas website templates",
-  authors: [{ name: "Tommy Jepsen", url: "https://tommyjepsen.com" }],
+    "office furniture, office stationery, toners, laptops, computers, medical equipment, supplies",
+  authors: [{ name: "Spiffy Lemon Calz Limited" }],
 };
 
 export default function RootLayout({
@@ -23,31 +22,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta
-          property="og:title"
-          content="TWBlocks - Free SaaS website blocks"
-        />
+        <meta property="og:title" content="Spiffy Lemon Calz Limited | Office & IT Supplies" />
         <meta
           property="og:description"
-          content="Free SaaS website blocks based on React with shadcn & Tailwind"
+          content="Office furniture, stationery, toners, laptops, computers, and medical equipment."
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/tommyjepsen/twblocks/main/public/hero4.png?raw=true"
+          content="/favicon.ico"
         />
       </head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Header />
-          <ModeToggle />
-
-          {children}
-        </ThemeProvider>
+      <body className={inter.className + " min-h-screen flex flex-col bg-[#F0F0DB]"}>
+        <Header />
+        {children}
       </body>
     </html>
   );

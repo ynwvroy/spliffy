@@ -1,17 +1,14 @@
 "use client";
 
 import { Button } from "./ui/button";
-import { GithubIcon, Menu, MoveRight, PaintBucket, X } from "lucide-react";
+import { Menu, MoveRight, X } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 
 export const Header = () => {
   const navigationItems = [
-    {
-      title: "All blocks",
-      href: "/",
-      description: "",
-    },
+    { title: "Home", href: "/", description: "" },
+    { title: "Products", href: "/#products", description: "" },
   ];
 
   const [isOpen, setOpen] = useState(false);
@@ -29,27 +26,9 @@ export const Header = () => {
           ))}
         </div>
         <div className="flex lg:justify-center">
-          <p className="font-semibold">TWBlocks.com</p>
+          <p className="font-semibold">Spiffy Lemon Calz Limited</p>
         </div>
-        <div className="flex justify-end w-full gap-4">
-          <Button
-            className="gap-2 hidden md:flex"
-            variant="outline"
-            onClick={() => {
-              window.open("https://ui.shadcn.com/themes", "_blank");
-            }}
-          >
-            shadcn Themes <PaintBucket className="w-4 h-4" />
-          </Button>
-          <Button
-            className="gap-2"
-            onClick={() => {
-              window.open("https://github.com/tommyjepsen/twblocks", "_blank");
-            }}
-          >
-            Github <GithubIcon className="w-4 h-4" />
-          </Button>
-        </div>
+        <div className="flex justify-end w-full gap-4" />
         <div className="flex w-12 shrink lg:hidden items-end justify-end">
           <Button variant="ghost" onClick={() => setOpen(!isOpen)}>
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
