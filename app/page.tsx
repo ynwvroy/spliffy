@@ -64,7 +64,7 @@ export default function Home() {
             <textarea id="message" name="message" rows={5} required className="w-full rounded-md border p-3" placeholder="How can we help?" />
           </div>
           <button type="submit" className="inline-flex h-10 w-fit items-center justify-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">Send</button>
-          <p className="text-sm font-medium text-muted-foreground">Or email us directly at <a className="underline" href="mailto:spiffytenders@gmail.com">spiffytenders@gmail.com</a> or call <a className="underline" href="tel:0793317122">0793317122</a>.</p>
+          <p className="text-sm font-medium text-muted-foreground">Or email us directly at <a className="underline" href="mailto:spiffytenders@gmail.com">spiffytenders@gmail.com</a>.</p>
         </form>
       </section>
 
@@ -77,7 +77,6 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Spiffy Lemon Calz Limited</p>
           <div className="flex gap-4">
             <a href="mailto:spiffytenders@gmail.com" className="underline">spiffytenders@gmail.com</a>
-            <a href="tel:0793317122" className="underline">0793317122</a>
           </div>
         </div>
       </div>
